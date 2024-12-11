@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>享 ● 食</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pink-bar">
+        <div class="left">享 ● 食</div>
+        <div class="right">
+            <span class="size" onclick="scrollToTop()">享食介紹</span>
+            <span class="size" onclick="scrollToPopularMenu()">熱門菜單</span>
+            <span class="size" onclick="scrollToRecommendMenu()">推薦菜單</span>
+            <span class="size">我的冰箱</span>
+            <!-- 我的冰箱內有新增食材 -->
+        </div>
+    </div>
+    <!-- TITLE圖片 -->
+    <div class="banner">
+        <img src="title.jpg" alt="滿版長方形圖片">
+    </div>
+
+    <div id="popular-menu" class="popular-dishes">
+        <h2>熱門食譜TOP5</h2>
+    </div>
+    <div class="container">
+        <div class="box" onclick="showPopup('食譜做法', '')">
+            <img src="蘋果燒排骨.webp" alt="蘋果燒排骨">
+            <p>蘋果燒排骨</p>
+        </div>
+        <div class="box" onclick="showPopup('食譜做法', '這是框框 2 的介紹內容')">
+            <img src="image2.jpg" alt="框框 2">
+            <p>框框 2</p>
+        </div>
+        <div class="box" onclick="showPopup('食譜做法', '這是框框 3 的介紹內容')">
+            <img src="image3.jpg" alt="框框 3">
+            <p>框框 3</p>
+        </div>
+        <div class="box" onclick="showPopup('食譜做法', '這是框框 4 的介紹內容')">
+            <img src="image4.jpg" alt="框框 4">
+            <p>框框 4</p>
+        </div>
+        <div class="box" onclick="showPopup('食譜做法', '這是框框 5 的介紹內容')">
+            <img src="image5.jpg" alt="框框 5">
+            <p>框框 5</p>
+        </div>
+    </div>
+    <div id="recommend-menu" class="popular-dishes">
+        <h2>推薦菜單</h2>
+        <div class="container1">
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 1 的介紹內容')">
+                <img src="image1.jpg" alt="框框 1">
+                <p>框框 1</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 2 的介紹內容')">
+                <img src="image2.jpg" alt="框框 2">
+                <p>框框 2</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 3 的介紹內容')">
+                <img src="image3.jpg" alt="框框 3">
+                <p>框框 3</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 4 的介紹內容')">
+                <img src="image4.jpg" alt="框框 4">
+                <p>框框 4</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 5 的介紹內容')">
+                <img src="image5.jpg" alt="框框 5">
+                <p>框框 5</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 6 的介紹內容')">
+                <img src="image1.jpg" alt="框框 6">
+                <p>框框 6</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 7 的介紹內容')">
+                <img src="image2.jpg" alt="框框 7">
+                <p>框框 7</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 8 的介紹內容')">
+                <img src="image3.jpg" alt="框框 8">
+                <p>框框 8</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 9 的介紹內容')">
+                <img src="image4.jpg" alt="框框 9">
+                <p>框框 9</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 10 的介紹內容')">
+                <img src="image5.jpg" alt="框框 10">
+                <p>框框 10</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 11 的介紹內容')">
+                <img src="image5.jpg" alt="框框 11">
+                <p>框框 11</p>
+            </div>
+            <div class="box" onclick="showPopup('食譜做法', '這是框框 12 的介紹內容')">
+                <img src="image5.jpg" alt="框框 12">
+                <p>框框 12</p>
+            </div>
+        </div>
+    </div>
+    <!-- 彈出視窗 -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="hidePopup()">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-description"></p>
+        </div>
+    </div>
+    <div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="hidePopup()">&times;</span>
+        <h2 id="popup-title">食譜標題</h2>
+        <p id="popup-description">這是框框內的介紹內容。</p>
+        <button onclick="hidePopup()">關閉</button>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

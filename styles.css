@@ -1,0 +1,203 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
+                url('background.jpg') no-repeat center center fixed;
+    background-size: cover; /* 確保圖片全屏顯示 */
+}
+.pink-bar {
+    position: fixed;
+    top: 0;
+    width: 97%;
+    z-index: 1000;
+    background-color: pink;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* 左右分布 */
+    align-items: center; /* 垂直方向居中對齊 */
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pink-bar .left {
+    font-size: 60px;
+    font-family: 'Comic Sans MS', cursive;
+    color: rgb(154, 36, 36);
+    display: flex; /* 使用 Flexbox */
+    align-items: center; /* 確保內容垂直居中 */
+    height: 100%; /* 讓內容滿高 */
+}
+
+.pink-bar .right span {
+    font-size: 30px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.popular-dishes {
+    margin: 20px;
+    text-align: center;
+}
+
+.box {
+    width: 280px;
+    height: 280px;
+    background-color: #f5a5c4;
+    border: 2px solid #ff69b4;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 80px;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.box img {
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.box p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+/* 遮罩背景 */
+.popup {
+    display: none; /* 預設隱藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* 背景半透明 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* 彈出框內容 */
+.popup-content {
+    position: relative;
+    background-color: white;
+    width: 80%; /* 寬度占屏幕的 80% */
+    max-width: 400px; /* 最大寬度 */
+    padding: 20px;
+    border-radius: 10px; /* 圓角 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 關閉按鈕 */
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.popup-content .close:hover {
+    color: #ff69b4; /* 懸停變色 */
+}
+
+/* 彈出框標題 */
+.popup-content h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* 彈出框文字 */
+.popup-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* 按鈕樣式 */
+.popup-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+    background-color: #ff4081;
+}
+.close {
+    position: absolute; /* 絕對定位 */
+    top: 10px; /* 距離彈出視窗容器頂部的距離 */
+    right: 10px; /* 距離彈出視窗容器右側的距離 */
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.close:hover {
+    color: #ff69b4; /* 滑鼠懸停變色 */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* 或 space-around, space-evenly */
+    flex-wrap: wrap; /* 確保內容在容器寬度不足時換行 */
+    align-items: center; /* 垂直方向居中 */
+    margin: 20px;
+    gap: 10px; /* 每個框框之間的間距 */
+}
+.popular-dishes h2 {
+    font-size: 40px;
+    color: #ff69b4;
+    margin-bottom: 80px; /* 調整標題與框框的距離 */
+    font-family: 'Times New Roman', serif;
+}
+.size:hover {
+    color: #ff69b4; /* 滑鼠懸停變色 */
+}
+.banner {
+    width: 100%; /* 視窗寬度滿版 */
+    margin:150px 0 0 0;;
+    padding: 0;
+    overflow: hidden; /* 隱藏圖片超出的部分 */
+    margin-bottom: 80px; /* 調整標題與框框的距離 */
+}
+
+.banner img {
+    width: 100%; /* 圖片拉伸到容器寬度 */
+    height: 550px; /* 保持圖片比例 */
+    display: block;
+}
+#popular-menu {
+    scroll-margin-top: 100px; /* 錨點區域距離頂部的空間 */
+}
+.container1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 每行 4 個 */
+    gap: 20px; /* 每個框框之間的間距 */
+    margin: 20px; /* 整體容器的外邊距 */
+}
+#recommend-menu {
+    scroll-margin-top: 100px; /* 上方留出 100px 的空間 */
+}
