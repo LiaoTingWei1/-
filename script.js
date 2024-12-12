@@ -1,17 +1,31 @@
 // script.js
 
-// 顯示彈出視窗
-function showPopup(title, description) {
+function showPopup(title, steps) {
     const popup = document.getElementById("popup");
-    document.getElementById("popup-title").textContent = title;
-    document.getElementById("popup-description").textContent = description;
-    popup.style.display = "flex";
+    const popupTitle = document.getElementById("popup-title");
+    const popupDescription = document.getElementById("popup-description");
+
+    // 設置標題
+    popupTitle.textContent = title;
+
+    // 清空現有內容
+    popupDescription.innerHTML = "";
+
+    // 動態生成清單內容
+    steps.forEach((step) => {
+        const li = document.createElement("li");
+        li.textContent = step;
+        popupDescription.appendChild(li);
+    });
+
+    // 顯示彈出框
+    popup.classList.add("active");
 }
 
-// 隱藏彈出視窗
+// 隱藏彈出框
 function hidePopup() {
     const popup = document.getElementById("popup");
-    popup.style.display = "none";
+    popup.classList.remove("active");
 }
 // 平滑滾動到熱門菜單區域
 function scrollToPopularMenu() {
