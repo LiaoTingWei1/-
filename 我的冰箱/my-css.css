@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* 背景色 */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* 新增按鈕樣式 */
+.add-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #ff7f50, #ff6347);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.add-icon {
+    width: 30px;
+    height: 30px;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.2));
+    pointer-events: none; /* 防止點擊影響圖片 */
+}
+/* 新增食材彈出視窗樣式 */
+.popup {
+    display: none; /* 預設隱藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.popup-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.popup-content .close:hover {
+    color: #ff7f50;
+}

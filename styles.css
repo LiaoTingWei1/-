@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), 
-                url('background.jpg') no-repeat center center fixed;
+                url('img/background.jpg') no-repeat center center fixed;
     background-size: cover; /* 確保圖片全屏顯示 */
 }
 .pink-bar {
@@ -67,11 +67,12 @@ body {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
 .box p {
-    margin-top: 10px;
-    font-size: 16px;
+    margin-bottom: 7px;
+    font-size: 27px;
     color: white;
     font-weight: bold;
 }
@@ -122,12 +123,12 @@ body {
 .popup-content {
     position: relative;
     background-color: white;
-    width: 80%; /* 寬度占屏幕的 80% */
-    max-width: 400px; /* 最大寬度 */
-    padding: 20px;
+    width: 90%; /* 寬度改為占螢幕的 90% */
+    max-width: 600px; /* 最大寬度擴展為 800px */
+    padding: 30px; /* 增加內部邊距，讓內容更舒適 */
     border-radius: 10px; /* 圓角 */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 增加陰影效果 */
+    text-align: left; /* 讓內容靠左對齊 */
 }
 
 /* 關閉按鈕 */
@@ -135,13 +136,14 @@ body {
     position: absolute;
     top: 10px;
     right: 10px;
-    font-size: 24px;
+    font-size: 30px;
     color: #aaa;
     cursor: pointer;
     transition: color 0.2s;
 }
 /* 彈出框標題 */
 .popup-content h2 {
+    text-align: center;
     margin: 0;
     font-size: 24px;
     color: #333;
@@ -150,7 +152,7 @@ body {
 /* 彈出框文字 */
 .popup-content p {
     margin: 10px 0;
-    font-size: 16px;
+    font-size: 20px;
     color: #555;
 }
 
@@ -232,8 +234,8 @@ body {
 }
 /* 按鈕樣式 */
 .buttons button {
-    padding: 10px 40px;
-    font-size: 14px;
+    padding: 15px 20px;
+    font-size: 18px;
     background-color: white;
     color: #ff69b4;
     border: 2px solid #ff69b4;
@@ -246,4 +248,12 @@ body {
     background-color: #ff69b4;
     color: white;
     transform: scale(1.05); /* 按鈕放大效果 */
+}
+.size a {
+    text-decoration: none; /* 去除下劃線 */
+    color: inherit; /* 繼承父元素顏色 */
+}
+
+.size a:hover {
+    color: #ff69b4; /* 懸停效果 */
 }

@@ -14,13 +14,14 @@
             <span class="size" onclick="scrollToTop()">享食介紹</span>
             <span class="size" onclick="scrollToPopularMenu()">熱門菜單</span>
             <span class="size" onclick="scrollToRecommendMenu()">推薦菜單</span>
-            <span class="size">我的冰箱</span>
-            <!-- 我的冰箱內有新增食材 -->
+            <span class="size">
+                <a href= "我的冰箱/my-fridge.html" target="_blank" style="text-decoration: none; color: inherit;">我的冰箱</a>
+            </span>
         </div>
     </div>
     <!-- TITLE圖片 -->
     <div class="banner">
-        <img src="title.jpg" alt="滿版長方形圖片">
+        <img src="img/title.jpg" alt="滿版長方形圖片">
     </div>
 
     <div id="popular-menu" class="popular-dishes">
@@ -28,11 +29,20 @@
     </div>
     <div class="container">
         <div class="box">
-            <img src="蘋果燒排骨.webp" alt="蘋果燒排骨">
+            <img src="img/蘋果燒排骨.webp" alt="蘋果燒排骨">
             <p>蘋果燒排骨</p>
             <div class="buttons">
-                <button onclick="showPopup('蘋果燒排骨 - 食譜', ['備料', '煮水，水滾後將排骨汆燙去血水，撈起備用。', '「華盛頓加拉蘋果」削皮，刨成泥狀。洋蔥切末。蒜頭切末。'])">食譜</button>
-                <button onclick="showPopup('蘋果燒排骨 - 食材', ['蘋果 130g', '排骨 440g', '洋蔥 50g', '蒜頭'])">食材</button>
+                <button onclick="showPopup('蘋果燒排骨 - 食譜', [
+                    '備料', 
+                    '煮水，水滾後將排骨汆燙去血水，撈起備用。',
+                    '「華盛頓加拉蘋果」削皮，刨成泥狀。洋蔥切末。蒜頭切末。'
+                 ])">食譜</button>
+                <button onclick="showPopup('蘋果燒排骨 - 食材', [
+                    '蘋果 130g',
+                    '排骨 440g',
+                    '洋蔥 50g',
+                    '蒜頭'
+                ])">食材</button>
             </div>
         </div>
         <div class="box">
